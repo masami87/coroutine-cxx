@@ -114,6 +114,7 @@ void Scheduler::coroutine_resume(int id) {
     _co->ctx.uc_link = &this->main; // 当前协程执行完之后切换到主协程
     _co->status = COROUTINE_RUNNING;
     this->running = id;
+    // std::cout << (void *)this << std::endl;
 
     // 创建协程
     makecontext(&_co->ctx, (void (*)())mainfunc, 1, (void *)this);

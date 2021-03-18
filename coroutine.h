@@ -10,7 +10,7 @@
 #define COROUTINE_SUSPEND 3
 
 #define STACK_SIZE (1024 * 1024)
-#define DEFAULT_COROUTINE 32
+#define DEFAULT_COROUTINE 64
 
 class Coroutine;
 class Scheduler;
